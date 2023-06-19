@@ -26,7 +26,7 @@ struct Car {
 };
 
 int main() {
-	/*cout << "Complex Num 1: " << endl;
+	cout << "Complex Num 1: " << endl;
 	ComplexNum complexnum1;
 	SetNums(complexnum1);
 	
@@ -68,11 +68,15 @@ int main() {
 				cout << "Invalid Operator!" << endl;
 				break;
 		}
-	}*/
+	}
 
 	int size = 1;
 	Car * cars = new Car[size];
+
 	char ModelCar[TEXTSIZE];
+	char UserColor[TEXTSIZE];
+	char UserTransmission[TEXTSIZE];
+	unsigned int UserPowerEngine;
 
 	unsigned int UserChoice = 1;
 
@@ -108,6 +112,17 @@ int main() {
 				}
 				break;
 			case 3:
+				cout << "Enter color: ";
+				cin.ignore();
+				cin.getline(UserColor, TEXTSIZE);
+				
+				cout << "Enter transmission: ";
+				cin.getline(UserTransmission, TEXTSIZE);
+
+				cout << "Enter power engine: ";
+				cin >> UserPowerEngine;
+
+				SearchCar(cars, size, UserColor, UserPowerEngine, UserTransmission);
 				break;
 			default:
 				cout << "Invalid choice!" << endl;

@@ -59,8 +59,8 @@ void PrintCar(Car* cars, const int index) {
 	cout << endl;
 	cout << "Lenght: " << cars[index].lenght << " m" << endl;
 	cout << "Clearance: " << cars[index].clearance << " cm" << endl;
-	cout << "Engine capacity: " << cars[index].EngineCapacity << " m^3" << endl;
-	cout << "Power engine: " << cars[index].PowerEngine << " w" << endl;
+	cout << "Engine capacity: " << cars[index].EngineCapacity << " l" << endl;
+	cout << "Power engine: " << cars[index].PowerEngine << " " << endl;
 	cout << "Diameter wheels: " << cars[index].diameter << " cm" << endl;
 	cout << "Color car: ";
 	for (int i = 0; i < strlen(cars[index].color); i++)
@@ -69,5 +69,22 @@ void PrintCar(Car* cars, const int index) {
 	cout << "Transmission car:";
 	for (int i = 0; i < strlen(cars[index].transmission); i++)
 		cout << cars[index].transmission[i];
+	cout << endl;
+}
+
+void SearchCar(Car* cars, const int size, char UserColor[], unsigned int UserPowerEngine, char UserTransmission[]) {
+	bool NoneCar = true;
+	cout << "Cars: ";
+	for (int i = 0; i < size - 1; i++) {
+		if (strcmp(UserColor, cars[i].color) == 0 && UserPowerEngine < cars[i].PowerEngine &&
+			strcmp(UserTransmission, cars[i].transmission) == 0) {
+			for (int j = 0; j < strlen(cars[i].model); j++)
+				cout << cars[i].model[j];
+			cout << "; ";
+			NoneCar = false;
+		}
+	}
+	if (NoneCar)
+		cout << "None";
 	cout << endl;
 }
