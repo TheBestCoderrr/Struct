@@ -75,7 +75,7 @@ void PrintCar(Car* cars, const int index) {
 void SearchCar(Car* cars, const int size, char UserColor[], unsigned int UserPowerEngine, char UserTransmission[]) {
 	bool NoneCar = true;
 	cout << "Cars: ";
-	for (int i = 0; i < size - 1; i++) {
+	for (int i = 0; i < size; i++) {
 		if (strcmp(UserColor, cars[i].color) == 0 && UserPowerEngine < cars[i].PowerEngine &&
 			strcmp(UserTransmission, cars[i].transmission) == 0) {
 			for (int j = 0; j < strlen(cars[i].model); j++)

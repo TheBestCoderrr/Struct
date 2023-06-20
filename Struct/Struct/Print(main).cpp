@@ -26,7 +26,7 @@ struct Car {
 };
 
 int main() {
-	cout << "Complex Num 1: " << endl;
+	/*cout << "Complex Num 1: " << endl;
 	ComplexNum complexnum1;
 	SetNums(complexnum1);
 	
@@ -68,9 +68,9 @@ int main() {
 				cout << "Invalid Operator!" << endl;
 				break;
 		}
-	}
+	}*/
 
-	int size = 1;
+	int size = 0;
 	Car * cars = new Car[size];
 
 	char ModelCar[TEXTSIZE];
@@ -91,8 +91,8 @@ int main() {
 				cout << "Exit!" << endl;
 				break;
 			case 1:
-				SetCar(cars, size);
 				size++;
+				SetCar(cars, size);
 				break;
 			case 2:
 				cout << "Enter model to print car or write \'all\': ";
@@ -100,7 +100,7 @@ int main() {
 				cin.getline(ModelCar, TEXTSIZE);
 
 				if (strcmp(ModelCar, "all") == 0) {
-					for (int i = 0; i < size - 1; i++)
+					for (int i = 0; i < size; i++)
 						PrintCar(cars, i);
 					cout << endl;
 				}
