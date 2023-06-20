@@ -26,7 +26,7 @@ struct Car {
 };
 
 int main() {
-	/*cout << "Complex Num 1: " << endl;
+	cout << "Complex Num 1: " << endl;
 	ComplexNum complexnum1;
 	SetNums(complexnum1);
 	
@@ -68,7 +68,7 @@ int main() {
 				cout << "Invalid Operator!" << endl;
 				break;
 		}
-	}*/
+	}
 
 	int size = 0;
 	Car * cars = new Car[size];
