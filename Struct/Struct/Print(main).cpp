@@ -77,7 +77,6 @@ int main() {
 	char UserColor[TEXTSIZE];
 	char UserTransmission[TEXTSIZE];
 	unsigned int UserPowerEngine;
-
 	unsigned int UserChoice = 1;
 
 	cout << "0 - Exit;\n1 - Add Car;\n2 - Print Car;\n3 - Search Car;" << endl;
